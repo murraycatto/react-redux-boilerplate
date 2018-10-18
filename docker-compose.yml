@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  web:
+    container_name: react_redux_boilerplate
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '1001:3000'
+    environment:
+      - NODE_ENV=development
